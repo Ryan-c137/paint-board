@@ -52,10 +52,10 @@ class MyPanel extends JPanel {
                         // If this is the draw after undo, means rewrite this space which point pointing to,
                         // and delete all old draws after that.
                         if (point < drawRepository.size()) {
-                            drawRepository.get(point).clear();
-                            for (int i = point+1; i < drawRepository.size(); i++) {
+                            for (int i = point; i < drawRepository.size(); i++) {
                                 drawRepository.delete(i);
                             }
+                            drawRepository.create();
                         }
                         board.s.setText("Mode: Drawing");
                         break;
@@ -87,10 +87,10 @@ class MyPanel extends JPanel {
                             drawRepository.create();
                         }
                         if (point < drawRepository.size()) {
-                            drawRepository.get(point).clear();
-                            for (int i = point+1; i < drawRepository.size(); i++) {
+                            for (int i = point; i < drawRepository.size(); i++) {
                                 drawRepository.delete(i);
                             }
+                            drawRepository.create();
                         }
                         drawRepository.draw(point, 300, 300, 350, Color.WHITE);
 
@@ -156,7 +156,6 @@ class MyPanel extends JPanel {
         addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseMoved(MouseEvent e) {
                 if (key == 'w') {
-                    drawRepository.draw(point, e.getX(), e.getY(), bold, color);
                     moved(e.getX(),e.getY());
                 }
             }
@@ -166,6 +165,7 @@ class MyPanel extends JPanel {
     private void moved(int x, int y) {
         this.x = x;
         this.y = y;
+        bold = boldDraw;
         repaint(this.x-bold, this.y-bold, bold*2, bold*2);
         System.out.println(x+","+y);
     }
@@ -202,8 +202,8 @@ class MyPanel extends JPanel {
             }
         }else if (key == 'w') {
             gg.setColor(color);
-            bold = boldDraw;
             gg.fillRect(x-bold, y-bold, bold*2, bold*2);
+            drawRepository.draw(point, x, y, bold, color);
         }
 
 
