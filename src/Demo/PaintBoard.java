@@ -2,16 +2,19 @@ package Demo;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
-public class TopLevelDemo {
-    public static BufferedImage paintImage = new BufferedImage(500, 600, BufferedImage.TYPE_INT_RGB);
+public class PaintBoard {
+
     private static void createAndShowGUI() {
+        int width, height;
         JFrame frame = new JFrame("TopLevelDemo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 600);
-        Board board = new Board(); // Create a single Board instance
-        MyPanel myPanel = new MyPanel(board); // Pass it to MyPanel
+        Option option = new Option();
+        width = Option.width;
+        height = Option.height;
+        frame.setSize(width, height);
+        Board board = new Board(width, height+10); // Create a single Board instance
+        MyPanel myPanel = new MyPanel(board);
 
         frame.add(board, BorderLayout.NORTH);
         frame.add(myPanel, BorderLayout.SOUTH);

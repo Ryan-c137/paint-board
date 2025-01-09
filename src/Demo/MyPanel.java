@@ -29,14 +29,14 @@ class MyPanel extends JPanel {
         colourNumber = 0;
         colourString = new String();
         drawRepository = new DrawRepository();
-        gg = TopLevelDemo.paintImage.createGraphics();
+        gg = Option.paintImage.createGraphics();
 
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.setFocusable(true); // Make sure the panel can receive focus
         this.requestFocusInWindow();
 
         gg.setColor(Color.WHITE); // Set the background color to white
-        gg.fillRect(0, 0, TopLevelDemo.paintImage.getWidth(), TopLevelDemo.paintImage.getHeight());
+        gg.fillRect(0, 0, Option.paintImage.getWidth(), Option.paintImage.getHeight());
 
         addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
@@ -95,7 +95,7 @@ class MyPanel extends JPanel {
                         drawRepository.draw(point, 300, 300, 350, Color.WHITE);
 
                         gg.setColor(Color.WHITE); // Set the background color to white
-                        gg.fillRect(0, 0, TopLevelDemo.paintImage.getWidth(), TopLevelDemo.paintImage.getHeight());
+                        gg.fillRect(0, 0, Option.paintImage.getWidth(), Option.paintImage.getHeight());
 
                         repaint();
                         break;
@@ -108,7 +108,7 @@ class MyPanel extends JPanel {
                         }
 
                         gg.setColor(Color.WHITE); // Set the background color to white
-                        gg.fillRect(0, 0, TopLevelDemo.paintImage.getWidth(), TopLevelDemo.paintImage.getHeight());
+                        gg.fillRect(0, 0, Option.paintImage.getWidth(), Option.paintImage.getHeight());
 
                         repaint();
                         break;
@@ -121,7 +121,7 @@ class MyPanel extends JPanel {
                         }
 
                         gg.setColor(Color.WHITE); // Set the background color to white
-                        gg.fillRect(0, 0, TopLevelDemo.paintImage.getWidth(), TopLevelDemo.paintImage.getHeight());
+                        gg.fillRect(0, 0, Option.paintImage.getWidth(), Option.paintImage.getHeight());
 
                         repaint();
                         break;
@@ -171,7 +171,7 @@ class MyPanel extends JPanel {
     }
 
     public Dimension getPreferredSize() {
-        return new Dimension(500, 600);
+        return new Dimension(Option.paintImage.getWidth(), Option.paintImage.getHeight());
     }
 
     public void paint(Graphics g) {
@@ -207,13 +207,13 @@ class MyPanel extends JPanel {
         }
 
 
-        g.drawImage(TopLevelDemo.paintImage, 0, 0 ,null);
+        g.drawImage(Option.paintImage, 0, 0 ,null);
 
     }
 
     static public void write() {
         try {
-            ImageIO.write(TopLevelDemo.paintImage, "png", new File("Drawing.png"));
+            ImageIO.write(Option.paintImage, "png", new File("Drawing.png"));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
