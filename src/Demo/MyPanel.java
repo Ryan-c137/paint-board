@@ -213,7 +213,7 @@ class MyPanel extends JPanel {
 
     static public void write() {
         try {
-            ImageIO.write(Option.paintImage, "png", new File("Drawing.png"));
+            ImageIO.write(Option.paintImage, "png", new File("painting.png"));
         } catch (IOException ex) {
             ex.printStackTrace();
         }

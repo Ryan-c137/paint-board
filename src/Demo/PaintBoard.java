@@ -7,7 +7,7 @@ public class PaintBoard {
 
     private static void createAndShowGUI() {
         int width, height;
-        JFrame frame = new JFrame("TopLevelDemo");
+        JFrame frame = new JFrame("Paint Board");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Option option = new Option();
         width = Option.width;
