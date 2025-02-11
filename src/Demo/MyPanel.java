@@ -29,7 +29,7 @@ class MyPanel extends JPanel {
         colourNumber = 0;
         colourString = new String();
         drawRepository = new DrawRepository();
-        gg = Option.paintImage.createGraphics();
+        gg = new Option().paintImage.createGraphics();
 
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.setFocusable(true); // Make sure the panel can receive focus
@@ -126,7 +126,7 @@ class MyPanel extends JPanel {
                         repaint();
                         break;
                     case 'c':
-                        if (colourNumber < 8) {
+                        if (colourNumber < 7) {
                             colourNumber++;
                         }else {
                             colourNumber = 0;

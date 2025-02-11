@@ -9,7 +9,7 @@ public class PaintBoard {
         int width, height;
         JFrame frame = new JFrame("Paint Board");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Option option = new Option();
+//        Option option = new Option();
         width = Option.width;
         height = Option.height;
         frame.setSize(width, height);
