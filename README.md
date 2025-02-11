@@ -21,7 +21,7 @@
 when you start the program, you'll be prompted to choose the canvas size.
 - enter your preferred dimensions or press **enter** to use the default (500x600).
 
-![canvas selection](img.png)
+![canvas selection](./docs/img.png)
 
 ### 2. start drawing
 - **press 'w'** to start drawing
@@ -29,20 +29,20 @@ when you start the program, you'll be prompted to choose the canvas size.
 
 you don’t need to press the touchpad—just move your finger as if you're drawing on a touchscreen.
 
-![drawing example](img_1.png)
+![drawing example](./docs/img_1.png)
 
 ### 3. editing your drawing
 - **undo (press 'u')** – removes the last stroke
 - **redo (press 'r')** – restores the last undone stroke
 - **change colors (press 'c')** – switch between different colors
 
-![color selection](img_3.png)
+![color selection](./docs/img_3.png)
 
 ### 4. adjusting brush size
 - **increase size ('=')** – make the brush larger
 - **decrease size ('-')** – make the brush smaller
 
-![brush size change](img_4.png)
+![brush size change](./docs/img_4.png)
 
 ### 5. clearing the canvas
 - **press '~'** to clear the entire board
