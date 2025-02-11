@@ -1,10 +1,10 @@
 ﻿# Paint Board
 
-## Description
+## description
 
-**Paint Board** is a simple whiteboard application written in Java. Unlike most painting programs, you don’t need to press down on the touchpad to draw. Instead, you can control the drawing functions using keyboard shortcuts, making it more convenient and comfortable to use.
+**paint board** is a simple whiteboard application written in java. unlike most painting programs, you don’t need to press down on the touchpad to draw. instead, you can control the drawing functions using keyboard shortcuts, making it more convenient and comfortable to use.
 
-## Features
+## features
 
 - **hands-free drawing** – no need to hold down the touchpad
 - **keyboard controls** – perform all actions with simple key presses
@@ -21,7 +21,7 @@
 when you start the program, you'll be prompted to choose the canvas size.
 - enter your preferred dimensions or press **enter** to use the default (500x600).
 
-![canvas selection](./docs/img.png)
+<img src="docs/img.png" width="400">  
 
 ### 2. start drawing
 - **press 'w'** to start drawing
@@ -29,20 +29,20 @@ when you start the program, you'll be prompted to choose the canvas size.
 
 you don’t need to press the touchpad—just move your finger as if you're drawing on a touchscreen.
 
-![drawing example](./docs/img_1.png)
+<img src="docs/img_1.png" width="400">  
 
 ### 3. editing your drawing
 - **undo (press 'u')** – removes the last stroke
 - **redo (press 'r')** – restores the last undone stroke
 - **change colors (press 'c')** – switch between different colors
 
-![color selection](./docs/img_3.png)
+<img src="docs/img_3.png" width="400">  
 
 ### 4. adjusting brush size
 - **increase size ('=')** – make the brush larger
 - **decrease size ('-')** – make the brush smaller
 
-![brush size change](./docs/img_4.png)
+<img src="docs/img_4.png" width="400">  
 
 ### 5. clearing the canvas
 - **press '~'** to clear the entire board
